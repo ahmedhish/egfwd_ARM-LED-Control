@@ -1,10 +1,10 @@
 #include "..\Mcal\Inc\Dio.h"
-
+#include "..\Mcal\Inc\Timer.h"
 
 int main(void)
 {
 	Dio_Init(F,pin1,output);
-	
+	Time1A_Delay();
 	while(1)
 	{
 
