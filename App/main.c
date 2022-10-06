@@ -37,16 +37,13 @@ int main(void)
 	{
 		if(~Dio_ReadChannel(F,pin0))
 		{
-			if(~Dio_ReadChannel(F,pin4))
-			{
-				T_ON++;
-				while(~Dio_ReadChannel(F,pin0));
-			}
-			else
-			{
-				T_OFF++;
-				while(~Dio_ReadChannel(F,pin0));
-			}
+			T_OFF++;
+			while(~Dio_ReadChannel(F,pin0));
+		}
+		else if(~Dio_ReadChannel(F,pin4))
+		{
+			T_ON++;
+			while(~Dio_ReadChannel(F,pin4));
 		}
 	}
 	
